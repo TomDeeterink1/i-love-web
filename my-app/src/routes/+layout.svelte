@@ -9,18 +9,19 @@
                 <li><a href="#">Projects</a></li>
             </ul>
         </nav>
-        <button class="open-menu"> Menu </button>
+        <button  class="open-menu"> Menu </button>
     </div>
 </header>
-
 <style>
     header{
         width: 100%;
         z-index: 99;
+        top: 0px;
+        height: max-content;
     }
-    header .container{
+    .container{
         margin: 0 auto;
-        max-width: 1120px;
+        max-width: 1132px;
         display: flex;
         gap: 3em;
         align-items: center;
@@ -37,9 +38,11 @@
 
     header ul li a{
         text-decoration: none;
-        font-size: 1.25em;
+        font-size: 1.15em;
+        font-weight: 500;
         color: black;
         transition: ease-out 0.2s;
+        font-family: Arial, Helvetica, sans-serif;
     }
     /* hover */
     header ul li a:hover{
@@ -52,7 +55,7 @@
     .open-menu{
         display: none;
     }
-    /* mobile menu */
+    /* mobile header */
     @media only screen and (max-width: 600px) {
     
     header nav{
@@ -69,30 +72,15 @@
         margin-top: 180px;
     }
     .slide{
-        right: 0px;
+        right: -1px;
     }
     .open-menu{
         display: block;
         z-index: 98;
     }
-}
-</style>
-
-<script lang="js">
-    import { browser } from '$app/environment';
-
-    if (browser) {
-        // Select all elements with the class 'open-menu'
-        const menubuttons = document.querySelectorAll('.open-menu');
-
-        // Define the clicker function
-        const clicker = (event) => {
-            
-        };
-
-        // Add event listener to each button
-        menubuttons.forEach(button => {
-            button.addEventListener("click", clicker);
-        });
     }
-</script>
+
+    /* footer */
+</style>
+<slot></slot>
+
