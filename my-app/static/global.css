@@ -1,10 +1,10 @@
 :root {
     /* colors normal */
-    --dark: #001717;
+    --dark: #262626;
     --light: #fff;
-    --primary: #ff4500;
-    --secondary: #48BDFA;
-    --accent: #48FAD7;
+    --primary: #D9D9D9;
+    --secondary: #BFBFBF;
+    --accent: #737373;
      /* colors grey */
     --grey-one: #f6f4f4 ;
     --grey-two: #ededed ;
