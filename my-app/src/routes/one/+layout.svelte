@@ -1,9 +1,9 @@
 <header>
     <div class="container">
         <nav class="menu">
-            <ul>
+            <!-- <ul>
                 <a href="/">Please take me back</a>
-            </ul>
+            </ul> -->
         </nav>
     </div>
 </header>
