@@ -9,6 +9,10 @@
     --grey-one: #f6f4f4 ;
     --grey-two: #ededed ;
     --grey-three: #e1e1e1 ;
+    /* season funky colors */
+    --funky-one: #95160b ;
+    --funky-two: #D9831A ;
+    --funky-three: #F2AB27 ;
 
     /* Typographs */
     h1 , h2 , h3 , h4 , a ,p {
