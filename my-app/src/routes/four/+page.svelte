@@ -1,5 +1,5 @@
 <script>
-    import Mainlink from "../../lib/mainlink/mainlink.svelte";
+    import Mainlink from "../../lib/mainlink/Mainlink.svelte";
 </script>
 <div class="container">
     <div class="container--inner"> 
