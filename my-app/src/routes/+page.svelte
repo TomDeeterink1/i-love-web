@@ -31,7 +31,7 @@
     </section>
     <section class="container--inner"> 
         <article >
-            <h2>Discover</h2>
+            <h2>Discover my mind</h2>
             <div class="grid">
                 <article>
                     <h3>One</h3>
@@ -66,7 +66,7 @@
                     <p>
                         equivalent to the sum of two and three; one more than four, or half of ten; 5.
                     </p>
-                    <Mainlink title="Click" alt="Five" href="four"/>
+                    <Mainlink title="Click" alt="Five" href="five"/>
                 </article>
             </div>
         </article>
@@ -117,7 +117,7 @@
                 <article >
                     <h3>We love web (jaar 2)</h3>
                     <p>
-                        Dion Pieters
+                        Vasilis van Gemert
                     </p>
                     <Mainlink title="Click" alt="Go to page" href="/welovewebtwo"/>
                 </article>
@@ -167,6 +167,9 @@
 
     .container--inner:nth-child(2) h2{
         font-size: 3rem;
+        font-family: 'Opensans' , sans-serif;
+        font-weight: 700;
+        font-style: normal;
         @media only screen and (max-width: 600px) {
             font-size: 2rem;
         }
