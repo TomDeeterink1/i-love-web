@@ -1,9 +1,10 @@
 <script>
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
+    
 
 	onMount(() => {
-		
+		gsap.fromTo(".grid", { y: 400 , opacity: 0 }, { y : 0, duration: 0.8 , opacity: 1 });
 	});
 </script>
 <div class="container">
@@ -126,12 +127,13 @@
 </div>
 
 <style>
+  
     header{
         scroll-snap-align: center;
         display: none;
     }
-
     .container{
+        box-shadow: inset 0px 0px 5px 0px rgba(110, 110, 110, 0.75);
         padding-top: 4rem;
         display: flex;
         gap: 6rem;
@@ -140,9 +142,9 @@
         @media only screen and (max-width: 600px) {
             flex-direction: column;
             gap: 0px;
+            margin: 1rem;
         }
     }
-
     .container--inner{
         display: flex;
         flex-direction: column;
@@ -159,9 +161,7 @@
         width: 100%;
         margin-left: 400px;
     }
-}
-
-
+    }
     .container--inner:nth-child(2) h2{
         font-size: 3rem;
         @media only screen and (max-width: 600px) {
