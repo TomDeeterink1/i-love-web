@@ -37,7 +37,7 @@ function applySeasonalStyles() {
      // Apply hover effects based on the current season
     function setHoverEffects(seasonColors, seasonShadows) {
         const buttons = document.querySelectorAll(".season-button");
-        const heroitems = document.querySelectorAll(".hero, .about ,.acces");
+        const heroitems = document.querySelectorAll(".hero, .about , .acces");
 
         heroitems.forEach((heroitem, index) => {
             const backgroundcolor = seasonColors[index % seasonColors.length];
