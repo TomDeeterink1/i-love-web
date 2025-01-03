@@ -20,7 +20,7 @@ function applySeasonalStyles() {
     // Function to determine the current season
     function getSeason() {
         const today = new Date();
-        const month = today.getMonth() + 1; // Months are 0-based
+        const month = today.getMonth() + 2; // Months are 0-based
         const day = today.getDate();
 
         if ((month === 3 && day >= 21) || (month > 3 && month < 6) || (month === 6 && day <= 20)) {
