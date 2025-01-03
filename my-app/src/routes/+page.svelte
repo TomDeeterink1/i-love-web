@@ -1,11 +1,14 @@
 <script>
+    import Mainlink from "../lib/mainlink/Mainlink.svelte";
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
     
 
+
 	onMount(() => {
 		gsap.fromTo(".grid", { y: 400 , opacity: 0 }, { y : 0, duration: 0.8 , opacity: 1 });
 	});
+    
 </script>
 <div class="container">
     <section class="container--inner"> 
@@ -29,42 +32,42 @@
     </section>
     <section class="container--inner"> 
         <article >
-            <h2>Discover</h2>
+            <h2>Discover my mind</h2>
             <div class="grid">
                 <article>
                     <h3>One</h3>
                     <p>
                         the same; identical.
                     </p>
-                    <a aria-label="this is a button" href="one"> Click</a>
+                    <Mainlink title="Click" alt="one" href="one"/>
                 </article>
                 <article>
                     <h3>Two</h3>
                     <p>
                         equivalent to the sum of one and one; one less than three;
                     </p>
-                    <a href="two"> Click</a>
+                    <Mainlink title="Click" alt="two" href="two"/>
                 </article>
                 <article>
                     <h3>Three</h3>
                     <p>
                         equivalent to the sum of one and two; one more than two;
                     </p>
-                    <a href="three"> Click</a>
+                    <Mainlink title="Click" alt="Three" href="three"/>
                 </article>
                 <article>
                     <h3>Four</h3>
                     <p>
                         equivalent to the product of two and two; one more than three, or six less than ten; 4.
                     </p>
-                    <a href="four"> Click</a>
+                    <Mainlink title="Click" alt="Four" href="four"/>
                 </article>
                 <article>
-                    <h3>Four</h3>
+                    <h3>Five</h3>
                     <p>
                         equivalent to the sum of two and three; one more than four, or half of ten; 5.
                     </p>
-                    <a href="four"> Click</a>
+                    <Mainlink title="Click" alt="Five" href="five"/>
                 </article>
             </div>
         </article>
@@ -76,28 +79,28 @@
                     <p>
                         A website for Mediahuis in next.js
                     </p>
-                    <a aria-label="Github repo mediahuis in next.js" href="https://github.com/TomDeeterink1/mediahuis-in-next"> Explore</a>
+                    <Mainlink title="Explore" alt="Github repo mediahuis in next.js" href="https://github.com/TomDeeterink1/mediahuis-in-next"/>
                 </article>
                 <article>
                     <h3>The client website (jaar 2)</h3>
                     <p>
                         A website for Mediahuis 
                     </p>
-                    <a aria-label="Github repo mediahuis" href="https://github.com/fdnd-task/the-client-website"> Explore</a>
+                    <Mainlink title="Explore" alt="Github repo mediahuis" href="https://github.com/fdnd-task/the-client-website"/>
                 </article>
                 <article>
                     <h3>We love web (jaar 1)</h3>
                     <p>
                         A website for We love Web
                     </p>
-                    <a aria-label="Github repo we love web" href="https://github.com/TomDeeterink1/we-love-web-site"> Explore</a>
+                    <Mainlink title="Explore" alt="Github repo we love web" href="https://github.com/TomDeeterink1/we-love-web-site"/>
                 </article>
                 <article>
                     <h3>Oba (jaar 1)</h3>
                     <p>
                         A website for OBA amsterdam
                     </p>
-                    <a aria-label="Github repo OBA amsterdam" href="https://github.com/TomDeeterink1/pleasurable-ui-team-oba"> Explore</a>
+                    <Mainlink title="Explore" alt="Github repo OBA amsterdam" href="https://github.com/TomDeeterink1/pleasurable-ui-team-oba"/>
                 </article>
 
             </div>
@@ -110,14 +113,14 @@
                     <p>
                         Nicolas Garnier,About animations
                     </p>
-                    <a aria-label="We love web" href="welovewebone"> Explore</a>
+                    <Mainlink title="Click" alt="Go to page" href="/welovewebone"/>
                 </article>
                 <article >
                     <h3>We love web (jaar 2)</h3>
                     <p>
-                        Dion Pieters
+                        Vasilis van Gemert
                     </p>
-                    <a aria-label="We love web" href="welovewebone"> Explore</a>
+                    <Mainlink title="Click" alt="Go to page" href="/welovewebtwo"/>
                 </article>
             </div>
         </article>
@@ -164,6 +167,9 @@
     }
     .container--inner:nth-child(2) h2{
         font-size: 3rem;
+        font-family: 'Opensans' , sans-serif;
+        font-weight: 700;
+        font-style: normal;
         @media only screen and (max-width: 600px) {
             font-size: 2rem;
         }
@@ -171,13 +177,13 @@
 
     .container .container--inner .hero{
         padding: 2rem;
-        background-color: var(--dark);
+        background-color: var(--funky-one);
         color: var(--light);
     }
 
     .container .container--inner .about{
         padding: 2rem;
-        background-color: var(--accent);
+        background-color: var(--funky-two);
         color: var(--light);
     }
 
@@ -194,7 +200,7 @@
     }
 
     .container .container--inner .acces{
-        background-color: var(--secondary);
+        background-color: var(--funky-three);
         padding: 2rem;
         color: var(--light);
         
@@ -208,36 +214,5 @@
         @media only screen and (max-width: 600px) {
             border-bottom: 1px solid  var(--secondary);
         }
-    }
-
-    .container .container--inner .grid article a{
-        content: "Click";
-        color: var(--dark);
-        transition: ease-out 0.2s;
-        text-decoration: none;
-        border-bottom: 1px solid var(--dark);
-        font-size: 1.15rem;
-        padding: 1rem 2rem;
-        
-    }
-
-    .container .container--inner .grid article a:hover{
-        transform: scale(115%)  translateX(8%) rotate(-2deg);
-        transition: ease-in 0.2s;
-        color: var(--light);
-        background-color: orangered;
-        box-shadow: 6px 6px 0px 0px rgb(255, 170, 33);
-        border-bottom: 1px solid orangered;
-        
-    }
-
-    .container .container--inner .grid article a:focus{
-        transform: scale(115%)  translateX(8%) rotate(-2deg);
-        transition: ease-in 0.2s;
-        color: var(--light);
-        background-color: orangered;
-        box-shadow: 6px 6px 0px 0px rgb(255, 170, 33);
-        outline: none;
-        border-bottom: 1px solid orangered;
     }
 </style>
