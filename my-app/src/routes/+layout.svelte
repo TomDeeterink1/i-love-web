@@ -1,6 +1,10 @@
 <script>
     import Mainlink from "../lib/mainlink/Mainlink.svelte";
-    import gsap from 'gsap';
+    import { onMount } from 'svelte'
+    import { Seasonstyles } from "$lib/page";
+            onMount(() => {
+                Seasonstyles() 
+            })
 </script>
 
 <header>

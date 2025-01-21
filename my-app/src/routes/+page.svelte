@@ -1,6 +1,10 @@
 <script>
     import Mainlink from "../lib/mainlink/Mainlink.svelte";
-    
+    import { onMount } from 'svelte'
+    import { Seasonstyles } from "$lib/page";
+            onMount(() => {
+                Seasonstyles() 
+            })
 </script>
 <div class="container">
     <section class="container--inner"> 
