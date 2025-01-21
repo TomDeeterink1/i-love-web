@@ -1,5 +1,3 @@
-// static/page.js
-console.log("Page.js loaded!");
 
 // Function to apply seasonal styles
 function applySeasonalStyles() {
@@ -34,36 +32,40 @@ function applySeasonalStyles() {
         }
     }
 
+    const currentSeason = getSeason();
+
+    console.log(getSeason);
+
      // Apply hover effects based on the current season
-    function setHoverEffects(seasonColors, seasonShadows) {
+    function setEffects(seasonColors, seasonShadows) {
         const buttons = document.querySelectorAll(".season-button");
-        const heroitems = document.querySelectorAll(".hero, .about , .acces");
-
-        heroitems.forEach((heroitem, index) => {
-            const backgroundcolor = seasonColors[index % seasonColors.length];
-
-            heroitem.style.backgroundColor = backgroundcolor;
-        })
         buttons.forEach((button, index) => {
             const hoverColor = seasonColors[index % seasonColors.length];
             const hoverShadow = seasonShadows[index % seasonShadows.length];
-
             // Set inline styles for hover effect
             button.addEventListener("mouseover", () => {
                 button.style.backgroundColor = hoverColor;
                 button.style.boxShadow = hoverShadow;
             });
+
             button.addEventListener("mouseout", () => {
-                button.style.backgroundColor = ""; // Reset background
-                button.style.boxShadow = ""; // Reset shadow
+                button.style.backgroundColor = "";
+                button.style.boxShadow = "";
             });
         });
     }
 
-    // Determine the current season and apply hover effects accordingly
-    const currentSeason = getSeason();
-    setHoverEffects(colors[currentSeason], shadows[currentSeason]);
+    function setBackgroundColor(seasonColors){
+        const heroitems = document.querySelectorAll(".hero, .about , .acces");
+
+        heroitems.forEach((heroitem, index) => {
+            const backgroundcolor = seasonColors[index % seasonColors.length];
+            heroitem.style.backgroundColor = backgroundcolor;
+        })
+    }
+
+    setEffects(colors[currentSeason], shadows[currentSeason]);
+    setBackgroundColor((colors[currentSeason]));
 }
 
-// Run the seasonal style function on load
 applySeasonalStyles();

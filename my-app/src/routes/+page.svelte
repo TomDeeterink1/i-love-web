@@ -1,12 +1,5 @@
 <script>
     import Mainlink from "../lib/mainlink/Mainlink.svelte";
-	import gsap from 'gsap';
-	import { onMount } from 'svelte';
-
-
-	onMount(() => {
-		
-	});
     
 </script>
 <div class="container">
@@ -177,13 +170,11 @@
 
     .container .container--inner .hero{
         padding: 2rem;
-        background-color: var(--funky-one);
         color: var(--light);
     }
 
     .container .container--inner .about{
         padding: 2rem;
-        background-color: var(--funky-two);
         color: var(--light);
     }
 
@@ -200,7 +191,7 @@
     }
 
     .container .container--inner .acces{
-        background-color: var(--funky-three);
+       
         padding: 2rem;
         color: var(--light);
         
