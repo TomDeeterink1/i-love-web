@@ -1,9 +1,14 @@
 <script>
     import Mainlink from "../lib/mainlink/Mainlink.svelte";
-    import { onMount } from 'svelte'
+    import { onMount } from 'svelte';
     import { Seasonstyles } from "$lib/page";
+    import { Getcoloronviewport } from "$lib/viewport";
+    
             onMount(() => {
-                Seasonstyles() 
+                
+                Seasonstyles();
+                Getcoloronviewport();
+                
             })
 </script>
 <div class="container">

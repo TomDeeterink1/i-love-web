@@ -17,7 +17,7 @@ export function Seasonstyles() {
     
         function getSeason() {
             const today = new Date();
-            const month = today.getMonth() + 2;
+            const month = today.getMonth() + 1;
             const day = today.getDate();
     
             if ((month === 3 && day >= 21) || (month > 3 && month < 6) || (month === 6 && day <= 20)) {
