@@ -16,6 +16,21 @@
         </nav>
     </div>
 </header>
+
+<slot></slot>
+
+<footer>
+    <div class="container">
+        <nav class="main-footer">
+           <h4>2025 All rights served</h4>
+           <h4>Copyright non excistand</h4>
+        </nav>
+    </div>
+</footer>
+
+
+
+
 <style>
     header{
         position: sticky;
@@ -39,5 +54,8 @@
     padding-inline-start: 0px;
    }
 
+   .main-footer{
+    border-top: 2px solid black;
+   }
+
 </style>
-<slot></slot>

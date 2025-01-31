@@ -76,6 +76,13 @@
             <h2>My projects on github</h2>
             <div class="grid">
                 <article>
+                    <h3>Release candidate Triple</h3>
+                    <p>
+                        Our release candidate
+                    </p>
+                    <Mainlink title="Explore" alt="Our release candidate" href="https://github.com/fdnd-agency/triple/tree/release-candidate"/>
+                </article>
+                <article>
                     <h3>The client in next.js (jaar 2)</h3>
                     <p>
                         A website for Mediahuis in next.js
@@ -122,6 +129,20 @@
                         Vasilis van Gemert
                     </p>
                     <Mainlink title="Click" alt="Go to page" href="/welovewebtwo"/>
+                </article>
+                <article >
+                    <h3>We love web (jaar 2)</h3>
+                    <p>
+                        Dave Bitter, Rise of AI Voices
+                    </p>
+                    <Mainlink title="Click" alt="Go to page" href="/welovewebthree"/>
+                </article>
+                <article >
+                    <h3>We love web (jaar 2)</h3>
+                    <p>
+                        Dion pieters
+                    </p>
+                    <Mainlink title="Click" alt="Go to page" href="/welovewebfour"/>
                 </article>
             </div>
         </article>
